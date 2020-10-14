@@ -1,0 +1,79 @@
+@import "../../App.scss";
+
+.header-container {
+  // background: url("public/images/img-home.jpg") center center/cover no-repeat;
+  height: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  object-fit: contain;
+
+  video {
+    object-fit: cover;
+    width: 100%;
+    height: 1200px;
+    position: fixed;
+    top: 72px;
+    z-index: -1;
+  }
+
+  h1 {
+    color: $primary;
+    text-align: center;
+    font-size: 5rem;
+    margin: 0 2rem;
+  }
+
+  p {
+    color: $primary;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .header-btn {
+    margin: 2rem;
+
+    .btn {
+      display: inline-block;
+      margin: 0 1rem;
+      width: 300px;
+      .fa-play-circle {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .header-container {
+    h1 {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 726px) {
+  .header-container {
+    p {
+      font-size: 1.5rem;
+    }
+
+    .header-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .btn {
+        margin: 1rem;
+      }
+    }
+  }
+}

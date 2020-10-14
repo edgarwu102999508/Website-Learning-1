@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { Button } from "../button/Button";
 import "./Navbar.scss";
 
@@ -28,40 +28,46 @@ function Navbar() {
   return (
     <Fragment>
       <nav className='navbar'>
-        <Link to='/' className='navbar-logo'>
+        <Link to='/home' className='navbar-logo' onClick={closeMobileMenu}>
           TRVL <i className='fab fa-typo3' />
         </Link>
         <div className='hamburger-btn' onClick={handleClick}>
           <i className={clicked ? "fas fa-times" : "fas fa-bars"} />
         </div>
-        <ul className={clicked ? "nav-menu active" : "nav-menu"}>
+        <ul className={clicked ? "nav-menu mobile" : "nav-menu"}>
           <li className='nav-item'>
-            <Link to='/' className='nav-link'>
+            <NavLink to='/home' className='nav-link' onClick={closeMobileMenu}>
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className='nav-item'>
-            <Link to='/services' className='nav-link'>
+            <NavLink
+              to='/service'
+              className='nav-link'
+              onClick={closeMobileMenu}>
               Services
-            </Link>
+            </NavLink>
           </li>
           <li className='nav-item'>
-            <Link to='/products' className='nav-link'>
+            <NavLink
+              to='/product'
+              className='nav-link'
+              onClick={closeMobileMenu}>
               Products
-            </Link>
+            </NavLink>
           </li>
           {!mobileMode && (
             <li className='nav-item'>
-              <Link
+              <NavLink
                 to='/signup'
                 className='nav-link-mobile'
                 onClick={closeMobileMenu}>
-                Sign Up
-              </Link>
+                SIGN UP
+              </NavLink>
             </li>
           )}
         </ul>
-        {mobileMode && <Button buttonStyle='btn-outline'>Sign Up</Button>}
+        {mobileMode && <Button buttonStyle='btn-outline'>SIGN UP</Button>}
       </nav>
     </Fragment>
   );

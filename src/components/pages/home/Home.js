@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
+import Header from "../../header/Header";
 
 function Home() {
   return (
-    <div>
-      <h3>Home Page Here</h3>
-    </div>
+    <Fragment>
+      <Header></Header>
+    </Fragment>
   );
 }
 export default Home;

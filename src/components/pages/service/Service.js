@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 
-function Footer() {
+function Service() {
   return (
     <Fragment>
-      <h3>Footer Here</h3>
+      <h1>Services here</h1>
     </Fragment>
   );
 }
 
-export default Footer;
+export default Service;
