@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import CardList from "../../card/CardList";
-import Header from "../../header/Header";
+import MainHeader from "../../header/MainHeader";
 
 function Home() {
   return (
     <Fragment>
-      <Header />
+      <MainHeader />
       <CardList />
     </Fragment>
   );
