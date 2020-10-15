@@ -1,10 +1,11 @@
-import React, { Fragment } from "react";
+import React from "react";
+import "./Footer.scss";
 
 function Footer() {
   return (
-    <Fragment>
+    <footer>
       <h3>Footer Here</h3>
-    </Fragment>
+    </footer>
   );
 }
 

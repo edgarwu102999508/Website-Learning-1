@@ -4,9 +4,9 @@ import { Button } from "../button/Button";
 
 function Header() {
   return (
-    <div className='header-container'>
-      <video src='/videos/video-2.mp4' autoPlay loop muted />
-      {/* <img src='%PUBLIC_URL%/images/image-1' alt='' /> */}
+    <header className='header-container'>
+      <video src='/videos/video-1.mp4' autoPlay loop muted />
+
       <h1>ADVENTURE AWAITS</h1>
       <p>What are you waiting for?</p>
       <div className='header-btn'>
@@ -24,7 +24,7 @@ function Header() {
           <i className='far fa-play-circle' />
         </Button>
       </div>
-    </div>
+    </header>
   );
 }
 
